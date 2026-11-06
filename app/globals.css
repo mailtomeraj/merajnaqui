@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f4f0e8; color: #211b2d; }
+::selection { background: #d9ff59; color: #211b2d; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #ff684d;
+  outline-offset: 4px;
+}
+.skip-link { position:absolute; left:1rem; top:-5rem; z-index:100; padding:.8rem 1rem; background:#211b2d; color:#fff; border-radius:.5rem; }
+.skip-link:focus { top:1rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
